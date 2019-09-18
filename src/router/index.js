@@ -15,7 +15,7 @@ const Router = ({component: Component, children, ...rest}) => (
 
 const Root = () => (
   <BrowserRouter>
-    <div className="router-content">
+    <div className="router-content" style={{width: '100%', height: '100%'}}>
       <Switch>
         <Router path="/" component={App} >
           <Router exact path="/docs" component={Docs} />

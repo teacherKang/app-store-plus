@@ -1,27 +1,53 @@
 import React, {Component} from 'react';
-import logo from '~/assets/logo.png';
-
+import '../style/index.scss';
 class App extends Component {
   state = {
+    search: ''
   }
-  handleBrowserChange = () => {
-    const {history} = this.props;
-    history.push('/docs');
+  
+  searchChange = () =>{
+    this.setState({search: event.target.value});
   }
   render() {
-    const {location: {pathname}} = this.props;
+    let search = this.state.search;
     return (
-      <div className="home" style={{paddingTop: 100}}>
-        <div
-          className={`center ${pathname === '/docs' ? 'logo-move' : ''}`}
-          onClick={this.handleBrowserChange}
-        >
-          <div className="logo-box">
-            <img src={logo} className="logo" />
+      <div className="home">
+        <div className="home-left">
+          <div className="user-box">
+            <div className="user-photo" style={{background: 'url(http://pito.nvmjs.com/1.jpg) no-repeat center', backgroundSize: 'cover'}}></div>
+            <div className="user-information">
+              <h4>sOxOs M2D</h4>
+              <p>尚未加入会员计划, 还可体验 3 个应用</p>
+            </div>
           </div>
-          <h1>React Project</h1>
+          <div className="search-box">
+            <div className="logo"></div>
+            <input type="text" value={search} placeholder="搜索应用名称" onChange={this.searchChange}/>      
+          </div>
+          <div className="left-list">
+            <div className="list-box active">
+              <div className="icon"></div>
+              <div className="right">推荐</div>
+            </div>
+            <div className="list-box">
+              <div className="icon"></div>
+              <div className="right">推荐</div>
+            </div>
+            <div className="list-box">
+              <div className="icon"></div>
+              <div className="right">推荐</div>
+            </div>
+            <div className="list-box">
+              <div className="icon"></div>
+              <div className="right">推荐</div>
+            </div>
+            <div className="list-box">
+              <div className="icon"></div>
+              <div className="right">推荐</div>
+            </div>
+          </div>
         </div>
-        <div style={{width: '1000px', margin: '0 auto'}}>
+        <div className="home-right">
           {this.props.children}
         </div>
       </div>
