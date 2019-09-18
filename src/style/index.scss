@@ -6,7 +6,7 @@
 	display: flex;
 	box-sizing: border-box;
 	.home-left{
-		width: 300px;
+		width: 400px;
 		height: 100%;
 		box-sizing: border-box;
 		padding: 20px 0px;
@@ -25,18 +25,20 @@
 	align-items: center;
 	padding: 0 5px;
 	.user-photo{
-		width: 40px;
-		height: 40px;
+		width: 80px;
+		height: 80px;
 		border-radius: 50%;
 		border: 1px solid red;
 	}
 	.user-information{
 		margin-left: 10px;
 		h4{
+			font-size: 28px;
 			color:rgba($color-nav-R,$color-nav-G,$color-nav-B,1);
 			font-weight: normal;
 		}
 		p{
+			font-size: 20px;
 			color:rgba($color-nav-R,$color-nav-G,$color-nav-B,.7);
 			font-size: 10px;
 		}
@@ -51,10 +53,53 @@
 	background: #3c3c3c;
 	display: flex;
 	align-items: center;
+	box-sizing: border-box;
+	padding:  0 10px;
 	.logo{
-		width: 18px;
-		height: 18px;
+		width: 40px;
+		height: 40px;
 		background: url(../assets/Logo.svg) no-repeat center;
 		background-size: cover;
 	}
+	input{
+		width: 200px;
+		margin-left: 20px;
+		background: 0;
+		outline: none;
+		border: 0;
+		color: rgb($color-nav-R, $color-nav-G, $color-nav-B);
+		font-size: 20px;
+	}
+}
+
+
+// list
+.left-list{
+	margin-top: 50px;
+}
+.list-box{
+	width: 100%;
+	height: 60px;
+	background: #303030;
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+	padding:  0 10px;
+	&.active{
+		background: rgba($color-nav-active-R, $color-nav-active-G, $color-nav-active-B, 1);
+		.right{
+			color: rgba($color-nav-R, $color-nav-G, $color-nav-B,1);
+		}
+	}
+	.icon{
+		width: 35px;
+		height: 35px;
+		background: url(../assets/Logo.svg) no-repeat center;
+		background-size: cover;		
+	}
+	.right{
+		margin-left: 25px;
+		color: rgba($color-nav-R, $color-nav-G, $color-nav-B,.5);
+		font-size: 20px;	
+	}	
 }

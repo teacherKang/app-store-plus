@@ -24,6 +24,28 @@ class App extends Component {
             <div className="logo"></div>
             <input type="text" value={search} placeholder="搜索应用名称" onChange={this.searchChange}/>      
           </div>
+          <div className="left-list">
+            <div className="list-box active">
+              <div className="icon"></div>
+              <div className="right">推荐</div>
+            </div>
+            <div className="list-box">
+              <div className="icon"></div>
+              <div className="right">推荐</div>
+            </div>
+            <div className="list-box">
+              <div className="icon"></div>
+              <div className="right">推荐</div>
+            </div>
+            <div className="list-box">
+              <div className="icon"></div>
+              <div className="right">推荐</div>
+            </div>
+            <div className="list-box">
+              <div className="icon"></div>
+              <div className="right">推荐</div>
+            </div>
+          </div>
         </div>
         <div className="home-right">
           {this.props.children}
